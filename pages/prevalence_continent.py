@@ -26,7 +26,7 @@ dfv = pd.read_csv(DATA_PATH.joinpath("df2babybot.csv"))
 
 layout = html.Div(
     [
-        html.Div([dcc.Graph(id="our_graph")]),
+        # html.Div([dcc.Graph(id="our_graph")]),
         html.Div(
             [
                 html.Br(),
@@ -57,6 +57,9 @@ layout = html.Div(
                              value = 'line'),
             ]
         ),
+
+        html.Div([dcc.Graph(id="our_graph")]),
+
         html.H3("SUMMARY"),
         html.P(id= "Summary", children=["The graph above shows the Prevalence(frequency,rampancy) levels of countries with depression filtered by Continents. The average prevalence(%) according to WHO (World Health Organization) is 3.8%, this graph therefore shows countries across the world with their respective prevalence levels." ])
     ]
